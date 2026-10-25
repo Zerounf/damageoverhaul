@@ -1,0 +1,27 @@
+{
+  "name": "Potion Effects",
+  "icon": "minecraft:potion",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The mod auto-registers $(o)potion effects$() per damage type at launch (8 types x 4 = 32):$(br2)$(#3CB371)resist_<type>$() - resistance up (beneficial): +X%/level to that type's resistance on hit, additive to enchantment resistance$(br)$(#CD5C5C)vulnerable_<type>$() - resistance down (harmful): -X%/level$(br)$(#FFD700)amplify_<type>$() - damage up (beneficial): +X/level to that type's outgoing damage$(br)$(#808080)weaken_<type>$() - damage down (harmful): -X/level$(br2)Effects work on $(o)monsters too$(), not just players."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Config$()$(br)$(l:damageoverhaul:config/config_overview)mob_effects_config.json$() controls per-level values:$(br2)defaults row is the fallback for new damage types (resist_up 5.0%/level, damage_up 0.10/level, etc.)$(br)per_type can override individual types$(br)enable_mob_effects master toggle$(br2)Registration needs restart; values hot-reload. New damage types auto-add rows; deleted types auto-remove."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Granting Effects$()$(br)Effects are granted via /effect command (no brewable potion form):$(br2)$(6)/effect give @s damageoverhaul:resist_fire 60 1$()$(br)60s, level 1 -> +5% fire resistance$(br2)$(6)/effect give @s damageoverhaul:amplify_slashing 60 2$()$(br)60s, level 2 -> +20% slashing damage$(br2)Other mods/datapacks can also grant them via effect pools."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Damage Chain Position$()$(br)Full chain (potion effects in bold):$(br2)Final = original x (1+charm bonus$(bold)+potion bonus$()) x (1-entity resist) x (1-armor resist) x (1-enchant resist$(bold)-potion resist$()) x (1-charm resist)$(br2)Potion resistance and enchantment resistance share the same additive pool. Potion damage and charm bonuses share the same multiplier zone.$(br2)$(4)Note$(): effect registration freezes at launch; new damage types need a restart."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Effect Icons$()$(br)Icons are in assets/damageoverhaul/textures/mob_effect/, named resist_fire.png, amplify_slashing.png, etc.$(br2)Defaults are placeholder textures (reusing charm textures). Replace with hand-drawn textures (recommended 18x18 pixels)."
+    }
+  ]
+}

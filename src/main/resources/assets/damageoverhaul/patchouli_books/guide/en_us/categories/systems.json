@@ -1,0 +1,6 @@
+{
+  "name": "Systems",
+  "icon": "minecraft:iron_sword",
+  "priority": 1,
+  "description": "Weapon distributions, resistances, enchantments, projectiles, block damage, gun compatibility and more."
+}

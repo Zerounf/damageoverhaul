@@ -1,0 +1,27 @@
+{
+  "name": "药水效果系统",
+  "icon": "minecraft:potion",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "模组在启动时按伤害类型自动注册$(o)药水效果$()（8 类型 × 4 效果 = 32 个）：$(br2)$(#3CB371)resist_<类型>$() — 抗性提升（有益）：受击时该类型抗性 +X%/级，加性并入附魔抗性池$(br)$(#CD5C5C)vulnerable_<类型>$() — 抗性降低（有害）：受击时该类型抗性 -X%/级$(br)$(#FFD700)amplify_<类型>$() — 伤害增幅（有益）：攻击时该类型伤害 +X/级$(br)$(#808080)weaken_<类型>$() — 伤害削弱（有害）：攻击时该类型伤害 -X/级$(br2)效果对$(o)怪物同样生效$()，不仅限玩家。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)数值配置$()$(br)$(l:damageoverhaul:config/config_overview)mob_effects_config.json$() 控制每级数值：$(br2)defaults 行为新增伤害类型的默认来源（resist_up 5.0%/级、damage_up 0.10/级等）$(br)per_type 可逐类型覆盖$(br)enable_mob_effects 总开关$(br2)效果注册需重启，数值热重载。新增伤害类型自动补行，删除类型自动移除行。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)如何给予效果$()$(br)效果通过 /effect 指令给予（没有可酿造的药水形式）：$(br2)$(6)/effect give @s damageoverhaul:resist_fire 60 1$()$(br)60秒，等级1 → +5% 火焰抗性$(br2)$(6)/effect give @s damageoverhaul:amplify_slashing 60 2$()$(br)60秒，等级2 → +20% 斩击伤害$(br2)其他模组/数据包也可通过效果池给予。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)结算位置$()$(br)完整结算链（药水效果加粗标注）：$(br2)调整后伤害 = 原伤 ×(1+饰品增伤$(bold)+药水增伤$()) ×(1-生物抗性)×(1-盔甲抗性) ×(1-附魔抗性$(bold)-药水抗性$())×(1-饰品类型抗性)$(br2)药水抗性与附魔抗性共享同一加性池，药水增伤与饰品增伤共享同一乘区。$(br2)$(4)注意$()：效果注册在启动时冻结——新增伤害类型后需重启才会生成对应效果。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)效果图标$()$(br)效果图标位于 assets/damageoverhaul/textures/mob_effect/，命名为 resist_fire.png、amplify_slashing.png 等。$(br2)默认为占位贴图（复用宝石贴图），可自行替换为手绘贴图（建议 18×18 像素）。"
+    }
+  ]
+}

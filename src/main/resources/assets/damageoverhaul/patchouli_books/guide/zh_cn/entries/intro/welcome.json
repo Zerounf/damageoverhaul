@@ -1,0 +1,15 @@
+{
+  "name": "欢迎阅读",
+  "icon": "minecraft:book",
+  "category": "damageoverhaul:intro",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)伤害改革（Damage Overhaul）$()是一款伤害系统重构模组。$(br2)它将原版单调的伤害系统重构为 $(#800080)8 种伤害类型$()，并允许你通过配置文件自由控制$(o)每一件武器$()、$(o)每一种射弹$()、$(o)每一个实体$()和$(o)每一件护甲$()的伤害分布与抗性。$(br2)全部功能均可在游戏中通过指令热重载，无需重启。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)核心能力$()$(br)$(l:damageoverhaul:systems/weapon_distribution)· 武器伤害分布配置$()$(br)$(l:damageoverhaul:systems/resistance)· 实体与护甲抗性配置$()$(br)$(l:damageoverhaul:systems/enchantments)· 三类自动注册附魔$()$(br)$(l:damageoverhaul:systems/projectile_system)· 射弹分布与映射$()$(br)$(l:damageoverhaul:systems/replace_entity)· 射弹实体替换$()$(br)$(l:damageoverhaul:systems/gun_compat)· 枪械模组兼容$()$(br)$(l:damageoverhaul:systems/block_damage)· 方块源性伤害$()$(br)$(l:damageoverhaul:systems/mana_repair)· 魔力修复（Botania）$()$(br)$(l:damageoverhaul:systems/misc)· 特殊机制与显示开关$()"
+    }
+  ]
+}

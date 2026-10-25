@@ -1,0 +1,15 @@
+{
+  "name": "Projectile Replacement",
+  "icon": "minecraft:tnt",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "In $(l:damageoverhaul:config/config_overview)projectile_item_mappings.json$(), set $(n){\"entity\":\"minecraft:tnt\",\"replace_entity\":true}$() to make a weapon actually launch a different entity (e.g. arrows shooting TNT).$(br2)The global $(bold)allow_dangerous_replace$() switch (default false) must also be enabled."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Details$()$(br)Replacement happens at spawn: original entity canceled, new entity created with position/velocity/rotation/owner transferred. Damage resolves through the mapped entity's distribution, falling back to damage type mappings (TNT explosion -> Blunt).$(br2)$(4)Warning$(): mapping to large entities (Ender Dragon) may misbehave."
+    }
+  ]
+}

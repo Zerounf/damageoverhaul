@@ -1,0 +1,15 @@
+{
+  "name": "射弹系统",
+  "icon": "minecraft:arrow",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)ranged_config.json$() 管理远程伤害：$(br)· $(bold)ranged_damage_source$()：全局默认判定为 weapon（按武器分布）或 projectile（按射弹分布）$(br)· 每个射弹条目含 $(bold)follow_default$()：true 跟随全局，false 使用该条目自己的分布$(br)· 两用物品（如三叉戟）默认拒绝跟随默认，避免误判$(br2)射弹物品 tooltip 显示$(5)百分比分布$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)射弹物品与实体的映射$()$(br)同种实体可能对应多种物品（如附魔箭/光灵箭都是 minecraft:arrow）。模组用三层机制解析：$(br)1. $(bold)同名匹配$()：实体 ID 与物品 ID 相同$(br)2. $(bold)标签扫描$()：minecraft:arrows / forge:arrows 标签成员自动映射到 minecraft:arrow$(br)3. $(bold)手动扩展$()：$(l:damageoverhaul:config/config_overview)projectile_item_mappings.json$() 中添加自定义映射$(br2)因此附魔箭、光灵箭、TACZ 弹药等都能正确显示与结算。"
+    }
+  ]
+}

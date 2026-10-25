@@ -1,0 +1,15 @@
+{
+  "name": "Gun Mod Compatibility",
+  "icon": "minecraft:crossbow",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Gun mods (Scorched Guns, TACZ, ...) store damage in gun JSONs and resolve it via projectile entities. This mod generically hooks them: when a projectile resolves no distribution, the $(o)shooter's held gun$() is looked up in weapon_distributions.json.$(br2)No mod-specific code - any \"gun JSON + projectile\" mod works."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Auto-learning$()$(br)With $(bold)auto_learn_ranged_weapons$() (default true), a gun's entry is auto-created (Piercing 100%) the first time it deals damage - then edit it freely.$(br2)Tooltips parse the damage number the gun mod itself displays; percentages only if parsing fails. $(o)Ammo needs no configuration.$()"
+    }
+  ]
+}

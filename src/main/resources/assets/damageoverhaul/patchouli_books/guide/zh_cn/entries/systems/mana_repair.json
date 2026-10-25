@@ -1,0 +1,15 @@
+{
+  "name": "魔力修复",
+  "icon": "botania:mana_pool",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "若安装了$(o)植物魔法（Botania）$()，$(l:damageoverhaul:config/config_overview)mana_repair_config.json$() 可让耐久物品消耗魔力自动修复。$(br2)未安装 Botania 时该功能自动禁用，模组照常运行。$(br2)每个条目需$(o)单独启用$()，并配置$(bold)每点耐久消耗的魔力值$()（比例可任意调整）。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)tooltip$()$(br)已启用的物品 tooltip 会显示：$(br)· 魔力修复：已启用/已禁用$(br)· 每点耐久消耗 X 魔力$(br2)$(2)工作方式$()$(br)玩家魔力池有魔力时，正在消耗耐久的物品按比例消耗魔力即时回补耐久，类似原版经验修复但由魔力驱动。"
+    }
+  ]
+}

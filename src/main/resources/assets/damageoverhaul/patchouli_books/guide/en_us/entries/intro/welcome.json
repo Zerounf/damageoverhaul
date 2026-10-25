@@ -1,0 +1,15 @@
+{
+  "name": "Welcome",
+  "icon": "minecraft:book",
+  "category": "damageoverhaul:intro",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Damage Overhaul$() rebuilds the vanilla damage system into $(#800080)8 damage types$(). Every weapon, projectile, entity and armor piece can be fully configured through JSON files.$(br2)All features hot-reload in game via commands - no restart needed."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Core Features$()$(br)$(l:damageoverhaul:systems/weapon_distribution)· Weapon damage distributions$()$(br)$(l:damageoverhaul:systems/resistance)· Entity & armor resistances$()$(br)$(l:damageoverhaul:systems/enchantments)· Three auto-registered enchantment sets$()$(br)$(l:damageoverhaul:systems/projectile_system)· Projectile distributions & mappings$()$(br)$(l:damageoverhaul:systems/replace_entity)· Projectile entity replacement$()$(br)$(l:damageoverhaul:systems/gun_compat)· Gun mod compatibility$()$(br)$(l:damageoverhaul:systems/block_damage)· Block-source damage$()$(br)$(l:damageoverhaul:systems/mana_repair)· Mana repair (Botania)$()$(br)$(l:damageoverhaul:systems/misc)· Special mechanics & display toggles$()"
+    }
+  ]
+}

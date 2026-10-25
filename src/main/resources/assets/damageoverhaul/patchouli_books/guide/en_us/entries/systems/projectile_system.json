@@ -1,0 +1,15 @@
+{
+  "name": "Projectile System",
+  "icon": "minecraft:arrow",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)ranged_config.json$() manages ranged damage: global default source (weapon/projectile), per-projectile $(bold)follow_default$() switch and distributions. Dual-purpose items (trident) default to refusing the global default."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Item-entity mapping$()$(br)Tipped arrows share minecraft:arrow. Resolution order: 1) same-ID match, 2) tag scan (minecraft:arrows / forge:arrows), 3) manual entries in $(l:damageoverhaul:config/config_overview)projectile_item_mappings.json$()."
+    }
+  ]
+}

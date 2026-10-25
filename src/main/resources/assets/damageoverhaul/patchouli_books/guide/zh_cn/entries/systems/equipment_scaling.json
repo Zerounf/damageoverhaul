@@ -1,0 +1,35 @@
+{
+  "name": "装备补正系统",
+  "icon": "minecraft:netherite_sword",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "装备补正是与 $(#9370DB)more_attributes$() 模组联动的软依赖系统：以玩家投入的基础能力点数为基准，让武器和护甲随属性成长。$(br2)9 项基础能力：$(br)strength 力量 / health 生命 / focus 集中$(br)stamina 体力 / endurance 耐性 / intelligence 智力$(br)agility 敏捷 / skill 技巧 / luck 幸运$(br2)未安装 more_attributes 时本系统不生效，模组其余功能一切照常。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)补正怎么算$()$(br2)$(bold)补正 = Σ(倍率 × 有效属性点)$()$(br)$(bold)有效属性点 = 已投等级 − baseLevel$()$(br2)力量 baseLevel = 10，其余能力为 0；允许负值，与 more_attributes 自身缩放语义一致。$(br2)倍率示例：0.02 = 每点有效属性 +2% 补正。力量投到 30 级（有效 20 点）→ 0.02×20 = $(6)+40%$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)两个配置文件$()$(br2)$(l:damageoverhaul:config/config_overview)weapon_scaling.json$() — 武器补正表$(br)$(l:damageoverhaul:config/config_overview)armor_scaling.json$() — 盔甲补正表$(br2)首次进入世界时全量扫描注册表：剑/斧/弓/弩/三叉戟、有攻击力属性的物品、已有分布的枪械，以及全部护甲，每件装备生成一行，默认 $(o)全 0$()（纯收录，不生效不显示）。$(br2)每件装备按「$(bold)伤害类型 × 基础能力$()」填倍率，文件顶部还有 enable 开关、base_attributes 列名与 grade_thresholds 等级阈值。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)武器结算$()（仅玩家）$(br)按伤害类型独立，加性并入攻击乘区：$(br2)类型伤害 × (1 + 饰品增伤 + 药水增伤 $(bold)+ 武器补正$())$(br2)攻击武器取手持物（主手有补正条目时用主手，否则查副手）；怪物攻击没有属性点，不享受补正。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)盔甲结算$()（仅玩家）$(br)头/胸/腿/脚 4 件 $(bold)逐件连乘$()，按类型独立，位于附魔+药水抗性之后、饰品抗性之前：$(br2)伤害 × (1−头) × (1−胸) × (1−腿) × (1−脚)$(br2)注意是连乘不是相加：4 件各 10% 火焰补正 → 0.9⁴ ≈ 0.656，即火焰受伤 $(6)约 -34%$()（不是 -40%）。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)字母等级显示$()$(br)tooltip 的「能力补正（增伤/御伤）」段按当前查看玩家的属性点实时计算，每行 = 类型 + 字母 + 百分比，按补正降序：$(br2)武器：火焰 $(6)S (+150%)$()（红）$(br)盔甲：火焰 $(3)S (-150%)$()（绿=受伤降低）$(br2)默认阈值：S≥150% A≥100% B≥75% C≥50% D≥25% E≥0%，可在 grade_thresholds 自定义。补正 ≤ 0 不显示（负补正仍参与结算）。$(br2)开关：display_config.json 的 show_equipment_scaling。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)自动维护$()$(br2)· 新增伤害类型 → 全部装备自动补类型行$(br)· more_attributes 扩展新能力 → 自动补能力列$(br)· 安装含新武器/护甲的模组 → 启动扫描自动收录$(br)· 旧配置自动迁移，原文件备份到 backups/$(br)· 全 0 行不同步客户端，整合包再大也不拖登录$(br2)标准流程：编辑 JSON → /damageoverhaul reload → 完成（多人服务器需重连同步显示）。"
+    }
+  ]
+}

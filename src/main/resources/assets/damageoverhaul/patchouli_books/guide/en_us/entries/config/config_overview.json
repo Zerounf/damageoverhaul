@@ -1,0 +1,15 @@
+{
+  "name": "Config Overview",
+  "icon": "minecraft:writable_book",
+  "category": "damageoverhaul:config",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "All configs live in $(4)config/damageoverhaul/$():$(br)$(bold)damage_types.json$() - type definitions (core)$(br)$(bold)damage_type_mappings.json$() - source-to-type mappings (mixed supported)$(br)$(bold)weapon_distributions.json$() - weapons + gun auto-learning$(br)$(bold)unarmed_distributions.json$() - bare-hand defaults$(br)$(bold)entity_resistances.json$() - entity resistances"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)armor_resistances.json$() - armor resistances$(br)$(bold)ranged_config.json$() - ranged source & projectile distributions$(br)$(bold)projectile_item_mappings.json$() - mappings & entity replacement$(br)$(bold)block_distributions.json$() - block-source damage$(br)$(bold)special_mechanics.json$() - deflection etc.$(br)$(bold)mana_repair_config.json$()$(br)$(bold)display_config.json$() - tooltip toggles (6)$(br)$(bold)projectile_strike_config.json$() - projectile enchant bonuses$(br)$(bold)charms.json$() - the 8 self damage gems$(br)$(bold)external_charms.json$() - third-party charm factor table (auto-scanned)$(br)$(bold)mob_effects_config.json$() - potion effect values (4 per type)$(br)$(bold)weapon_scaling.json$() - weapon scaling table (needs more_attributes)$(br)$(bold)armor_scaling.json$() - armor scaling table (needs more_attributes)$(br2)$(o)Missing fields/entries auto-regenerate on load.$()"
+    }
+  ]
+}

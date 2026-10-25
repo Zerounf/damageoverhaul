@@ -1,0 +1,15 @@
+{
+  "name": "Block-Source Damage",
+  "icon": "minecraft:magma_block",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)block_distributions.json$() configures environmental damage by block ID (magma, campfire, cactus, powder snow...). Each entry has $(bold)use_default$(): true = default mapping chain, false = use this entry's distribution.$(br2)Triggered when a damage source has no entity; the block you stand in and the block below are both checked."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Auto-learning$()$(br)With $(bold)auto_learn_block_damage$() (default true), any block that deals damage registers itself on first harm (use_default=true, no behavior change). Edit it to false with a distribution to take over.$(br2)$(o)Campfire and magma block can have completely different distributions.$()"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "指令一览",
+  "icon": "minecraft:command_block",
+  "category": "damageoverhaul:commands",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "所有指令需 $(bold)OP 等级 2$()。$(br2)$(6)/damageoverhaul reload$()$(br)重载全部配置文件，并自动补齐新增伤害类型的抗性/武器/映射表。$(br2)$(6)/damageoverhaul migrate$()$(br)强制执行一次迁移检查（与 reload 等价，语义上强调迁移）。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)/damageoverhaul migrations$()$(br)显示最近一次加载的$(o)详细迁移日志$()：自动改了哪些文件、新增了哪些条目、备份位置。$(br2)$(6)/damageoverhaul status$()$(br)显示模组当前状态：伤害类型数、三类附魔数量（及等级上限）、药水效果状态、偏转机制、远程默认来源、各射弹配置统计、两用清单、魔力修复、方块分布、自家饰品数量与第三方饰品收录条目数。"
+    }
+  ]
+}

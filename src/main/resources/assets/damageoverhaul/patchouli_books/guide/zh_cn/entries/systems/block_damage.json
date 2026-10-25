@@ -1,0 +1,15 @@
+{
+  "name": "方块源性伤害",
+  "icon": "minecraft:magma_block",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)block_distributions.json$() 按方块 ID 配置环境伤害分布（岩浆块、篝火、仙人掌、细雪等）。$(br2)每个条目：$(br)$(bold)use_default$()：true 走默认映射链路（本条目分布不生效）；$(br)false 则按下方 $(bold)damage_distribution$() 生效。$(br2)判定时机：伤害来源无实体（如站在岩浆块上的 hot_floor 伤害），模组检查你身体所在方块与脚下方块。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)自动学习$()$(br)全局开关 $(bold)auto_learn_block_damage$()（默认 true）：实体首次受到某方块的伤害时，该方块自动登记进配置（use_default=true，行为不变）。$(br2)也就是说$(o)你不需要手动知道有哪些伤害方块$()——站在上面受一次伤，配置里就有了；把 use_default 改为 false 并填写分布，即可接管该方块。$(br2)$(o)篝火与岩浆块可以使用完全不同的分布。$()"
+    }
+  ]
+}

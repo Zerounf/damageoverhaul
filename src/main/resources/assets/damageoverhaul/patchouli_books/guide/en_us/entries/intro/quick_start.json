@@ -1,0 +1,15 @@
+{
+  "name": "Quick Start",
+  "icon": "minecraft:paper",
+  "category": "damageoverhaul:intro",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(2)1. Install$()$(br)Drop the jar into your mods folder. $(o)Install Patchouli to get this book$() - the mod runs fine without it.$(br2)$(2)2. Configs$()$(br)First launch generates everything under $(4)config/damageoverhaul/$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)3. Tooltips$()$(br)Hover weapons/armor to see distributions and resistances live.$(br2)$(2)4. Edit & Reload$()$(br)Edit any config, save, run $(6)/damageoverhaul reload$() - $(o)no restart required$()."
+    }
+  ]
+}

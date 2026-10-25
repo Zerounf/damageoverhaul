@@ -1,0 +1,15 @@
+{
+  "name": "特殊机制与显示开关",
+  "icon": "minecraft:target",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)special_mechanics.json$() 提供伤害$(bold)偏转$()等特殊机制：将部分伤害按比例\"弹开\"减免，判定基于基础抗性后的数值，全部参数可配置。$(br2)$(l:damageoverhaul:config/config_overview)unarmed_distributions.json$() 可按实体 ID 配置空手/生物裸击的默认分布。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)display_config.json$() 控制四类 tooltip 显示开关：$(br)· $(bold)show_weapon_distribution$() 武器分布$(br)· $(bold)show_armor_resistance$() 护甲抗性$(br)· $(bold)show_projectile_distribution$() 射弹分布$(br)· $(bold)show_mana_repair$() 魔力修复$(br2)$(2)服务端优先$()$(br)多人游戏中以$(o)服务端$()的显示配置为准，玩家登录时自动同步到客户端，保证全服显示一致。"
+    }
+  ]
+}

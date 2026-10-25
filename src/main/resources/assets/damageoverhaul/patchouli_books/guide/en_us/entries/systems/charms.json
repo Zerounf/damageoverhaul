@@ -1,0 +1,27 @@
+{
+  "name": "Charm System",
+  "icon": "damageoverhaul:fire_charm",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Requires $(o)Curios API$(). The mod auto-adds a $(4)charm$() slot to players, coexisting with ring/necklace slots from other mods.$(br2)The mod ships $(bold)8 damage gems$() (Slashing/Blunt/Piercing/Magic/Fire/Lightning/Dark/Holy): by default $(c)+15%$() damage of that type on attack and $(2)-10%$() damage taken of that type.$(br2)$(6)Stacking rule$(): same-type charms (including third-party ones) $(o)take the highest value, they never stack$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)When it applies$()$(br)· Attack: type damage ×(1+bonus)$(br)· Defense: after entity/armor/enchantment resistances, an independent per-type factor ×(1-resistance), only affecting configured types.$(br2)Values and texture frame animation are adjustable in $(l:damageoverhaul:config/config_overview)charms.json$(); $(o)adding/removing self charms requires a restart$() (items register at launch)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Bonuses for other mods' trinkets$() ($(l:damageoverhaul:config/config_overview)external_charms.json$())$(br)No manual item IDs needed - everything is collected automatically:$(br)1) On startup/reload, a full registry scan registers every third-party item carrying a $(4)curios$() tag (anything equippable in a Curios slot);$(br)2) An equip-time fallback scan runs on login and every 10 seconds afterwards, covering mods that generate tags at runtime."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each charm gets one row listing factors for $(bold)all damage types$():$(br)· $(c)attack_bonuses$() damage bonus, 0.15 = +15%$(br)· $(2)defense_resistances$() type resistance, 0.10 = -10%$(br)· 0 = no effect (no gameplay impact, no tooltip line)$(br2)Workflow: launch once to generate the table → find the item's row and change 0 to your value → $(6)/damageoverhaul reload$(). New damage types auto-append a 0 column to every row; old hand-written entries migrate automatically."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Two master switches$()$(br)· $(bold)enable_external_charms$(): master switch; false disables the whole feature.$(br)· $(bold)auto_scan_curios_items$(): startup scan switch; false keeps existing rows and never registers new items.$(br2)$(o)Note$(): items only work while actually worn in a Curios slot (backpack inventory does nothing). All-zero rows are never synced over the network, so huge modpacks keep login packets small."
+    }
+  ]
+}

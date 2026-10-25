@@ -1,0 +1,15 @@
+{
+  "name": "枪械模组兼容",
+  "icon": "minecraft:crossbow",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "焦火枪械（Scorched Guns）、TACZ 等$(o)枪械类模组$()的伤害存储在枪械 JSON 中、由射弹实体结算，与原版武器体系完全不同。$(br2)本模组用$(o)来源武器回退$()机制通用兼容：枪械射弹命中后查不到射弹分布时，自动检查$(bold)射手手中的枪$()在 weapon_distributions.json 中的分布并按其拆分。$(br2)不硬编码任何模组——任何\"枪JSON+射弹\"型模组都适用。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)自动学习$()$(br)weapon_distributions.json 顶层开关 $(bold)auto_learn_ranged_weapons$()（默认 true）：某把枪首次造成伤害时自动生成条目（默认穿刺 100%）并写入配置，之后你可以在文件中修改它的分布。$(br2)$(2)tooltip 基数$()$(br)枪械没有攻击力属性，tooltip 会解析枪械模组自己标注的伤害数字（如\"伤害: 10.0\"）作为显示基数；解析失败时仅显示百分比。$(br2)$(o)弹药无需配置——伤害完全由枪决定。$()"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "修改与重载流程",
+  "icon": "minecraft:anvil",
+  "category": "damageoverhaul:config",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(2)标准流程$()$(br)1. 用任意文本编辑器打开对应配置$(br)2. 修改数值（保持合法 JSON 格式）$(br)3. 保存文件$(br)4. 游戏内执行 $(6)/damageoverhaul reload$()$(br)5. 指令反馈会列出本次自动迁移与新增条目$(br2)$(o)全程无需重启游戏。$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)自动迁移与备份$()$(br)每次加载都会校验配置版本（_schema_version）：$(br)· 旧格式字段自动迁移为新格式$(br)· 缺失的伤害类型/条目自动补齐$(br)· 修改前原文件自动备份到$(n)config/damageoverhaul/backups/<时间戳>/$()$(br)· 全部自动变更记录在迁移日志中$(br2)$(o)你手动做过的调整永远不会被覆盖。$()"
+    }
+  ]
+}

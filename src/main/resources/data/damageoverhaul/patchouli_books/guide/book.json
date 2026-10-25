@@ -1,0 +1,12 @@
+{
+  "name": "伤害改革指南",
+  "landing_text": "欢迎阅读$(bold)《伤害改革指南》$()$(br2)本手册完整介绍了伤害改革（Damage Overhaul）模组的全部功能：$(br)$(l:damageoverhaul:intro/damage_types)八种伤害类型$()、武器/护甲/射弹分布配置、三类附魔、$(l:damageoverhaul:systems/mob_effects)药水效果系统$()、方块源性伤害、$(l:damageoverhaul:systems/charms)饰品系统（含第三方饰品加成）$()、枪械模组兼容以及配置迁移系统。$(br2)$(l:damageoverhaul:intro/quick_start)$(o)点击这里快速上手 →$()"
+  ,
+  "version": 1,
+  "creative_tab": "minecraft:tools_and_utilities",
+  "use_resource_pack": true,
+  "model": "patchouli:book_purple",
+  "nameplate_color": "7B1FA2",
+  "show_progress": false,
+  "i18n": false
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Mana Repair",
+  "icon": "botania:mana_pool",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "With $(o)Botania$() installed, $(l:damageoverhaul:config/config_overview)mana_repair_config.json$() lets durability items auto-repair using mana. Without Botania the feature disables itself.$(br2)Each item must be enabled individually with a configurable mana-per-durability ratio. Tooltips show enabled state and cost."
+    }
+  ]
+}

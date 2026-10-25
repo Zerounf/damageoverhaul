@@ -1,0 +1,15 @@
+{
+  "name": "Entity & Armor Resistances",
+  "icon": "minecraft:netherite_chestplate",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)entity_resistances.json$() sets per-type resistance per entity ID. Positive = vulnerable (takes more), negative = resistant, 0 = normal.$(br2)$(l:damageoverhaul:config/config_overview)armor_resistances.json$() does the same per armor piece. $(o)protect enchantments add 5%/level after armor resistance and before armor value reduction$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Two-stage independent reduction$()$(br)Base resistance -> enchantment resistance -> vanilla armor value, multiplied stage by stage. Armor tooltips list non-zero resistances sorted descending; red = vulnerable, green = resistant."
+    }
+  ]
+}

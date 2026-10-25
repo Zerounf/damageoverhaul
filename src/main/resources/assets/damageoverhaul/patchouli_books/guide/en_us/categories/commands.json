@@ -1,0 +1,6 @@
+{
+  "name": "Commands",
+  "icon": "minecraft:command_block",
+  "priority": 3,
+  "description": "Full usage of the /damageoverhaul command."
+}

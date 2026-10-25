@@ -1,0 +1,15 @@
+{
+  "name": "Enchantments",
+  "icon": "minecraft:enchanted_book",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Three enchantment sets auto-register per damage type at launch (8 types x 3 = 24):$(br)$(#3CB371)protect_<type>$() - armor resistance, 5%/level$(br)$(#CD5C5C)strike_<type>$() - weapon bonus, 10%/level$(br)$(#7B68EE)projectile_strike_<type>$() - projectile-only items (arrows)$(br2)$(bold)Level Decoupled$(): max_enchant_level defaults to 255. Anvil-combined or command-granted levels beyond 4 work normally via the linear formula. Enchanting tables still cap at 4 (vanilla limit)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Vanilla arrows can't normally be enchanted - the mod $(o)takes over anvil merging$() for projectiles.$(br2)Enchanted tooltips show $(2)(with enchantments)$() and green bonus values.$(br2)$(4)Note$(): enchantments freeze at launch; new damage types need a $(o)restart$() to generate them."
+    }
+  ]
+}

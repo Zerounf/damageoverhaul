@@ -1,0 +1,15 @@
+{
+  "name": "Edit & Reload Workflow",
+  "icon": "minecraft:anvil",
+  "category": "damageoverhaul:config",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Workflow$()$(br)1. Edit the config$(br)2. Save (keep valid JSON)$(br)3. Run $(6)/damageoverhaul reload$()$(br)4. Command feedback lists migrations and new entries$(br2)$(o)No restart ever needed.$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Migration & Backups$()$(br)Schema version is checked every load: old formats migrate automatically, missing entries regenerate, and originals are backed up to $(n)config/damageoverhaul/backups/<timestamp>/$() before any write. All changes are logged.$(br2)$(o)Your manual edits are never overwritten.$()"
+    }
+  ]
+}

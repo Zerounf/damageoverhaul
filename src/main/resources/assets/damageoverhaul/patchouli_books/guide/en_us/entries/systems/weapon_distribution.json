@@ -1,0 +1,15 @@
+{
+  "name": "Weapon Distributions",
+  "icon": "minecraft:netherite_sword",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)weapon_distributions.json$() defines each weapon's damage composition. Example: iron sword with Slashing 0.6 / Piercing 0.3 / Blunt 0.1 - a 6-point hit splits into 3.6+1.8+0.6, each reduced by its matching armor resistance.$(br2)Ratios may sum above 1.0 to amplify total damage."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Priority$()$(br)1. Item NBT custom distribution$(br)2. Config by item ID$(br)3. Defaults (swords/axes/tools)$()$(br2)Tooltips show values x percentages. Weapons without attack damage (guns) parse the damage number from other mods' tooltips."
+    }
+  ]
+}

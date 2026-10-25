@@ -1,0 +1,27 @@
+{
+  "name": "饰品系统",
+  "icon": "damageoverhaul:fire_charm",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "需要前置 $(o)Curios API$()。模组自动给玩家添加 $(4)charm$() 饰品槽，与整合包原有的戒指/项链等槽位共存。$(br2)模组自带 $(bold)8 种伤害宝石$()（斩击/钝击/穿刺/魔力/炽焰/雷霆/暗影/圣光）：默认攻击对应类型伤害 $(c)+15%$()，受击时对应类型伤害 $(2)-10%$()。$(br2)$(6)叠加规则$()：同类型多件饰品（含第三方饰品）$(o)只取最高值，不叠加$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)结算位置$()$(br)· 攻击：该类型伤害 ×(1+增幅)$(br)· 防御：生物抗性→护甲抗性→附魔抗性之后，按类型独立减免 ×(1-抗性)，仅对配置的类型生效。$(br2)数值与贴图帧动画可在 $(l:damageoverhaul:config/config_overview)charms.json$() 调整；$(o)新增/删除自家饰品需重启游戏$()（物品在启动时注册）。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)给其他模组的饰品加加成$()（$(l:damageoverhaul:config/config_overview)external_charms.json$()）$(br)不需要手动查物品ID——模组自动遍历收录：$(br)1) 启动/reload 时全量扫描所有带 $(4)curios$() 标签、能装进饰品槽的第三方饰品；$(br)2) 玩家实际装备时补扫（登录即查，之后每 10 秒检查），动态标签的模组也能覆盖。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "表格中每个饰品一行，列出$(bold)全部伤害类型$()的两类因子：$(br)· $(c)attack_bonuses$() 伤害增幅，0.15 = +15%$(br)· $(2)defense_resistances$() 类型抗性，0.10 = -10%$(br)· 0 = 无影响（不生效，tooltip 也不显示）$(br2)用法：启动世界生成表格 → 找到目标饰品行把 0 改成数值 → $(6)/damageoverhaul reload$()。新增伤害类型会自动给所有行补 0 列；旧手工条目自动迁移。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)两个总开关$()$(br)· $(bold)enable_external_charms$()：总开关，false 时第三方饰品功能全停。$(br)· $(bold)auto_scan_curios_items$()：启动扫描开关，false 时只保留已有条目，不再收录新饰品。$(br2)$(o)注意$()：饰品必须真正装备在 Curios 槽位中才生效，放在背包无效；全 0 条目不参与网络同步，整合包饰品再多也不影响登录。"
+    }
+  ]
+}

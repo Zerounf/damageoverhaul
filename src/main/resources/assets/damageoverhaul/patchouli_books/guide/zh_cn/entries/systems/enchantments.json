@@ -1,0 +1,15 @@
+{
+  "name": "附魔系统",
+  "icon": "minecraft:enchanted_book",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "模组在启动时按伤害类型$(o)自动注册三套附魔$()（8 类型 × 3 类 = 24 个）：$(br2)$(#3CB371)protect_<类型>$() — 护甲抗性，5%/级$(br)$(#CD5C5C)strike_<类型>$() — 武器增伤，10%/级，不挤占其他类型$(br)$(#7B68EE)projectile_strike_<类型>$() — 射弹增伤，仅纯射弹物品（箭类）可附$(br2)$(bold)等级解耦$()：max_enchant_level 默认 255，铁砧叠加/指令的任意等级均按线性公式生效。附魔台最高仍出 4 级（原版限制）。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)获取方式$()$(br)protect/strike 可在附魔台与铁砧使用；原版箭无法正常附魔，模组通过$(o)接管铁砧合并流程$()实现射弹附魔。$(br2)$(2)tooltip 显示$()$(br)带附魔的武器/护甲/射弹，其分布与抗性 tooltip 会标注$(2)(含附魔)$()并列出每项加成数值（绿色）。$(br2)$(4)注意$()：附魔注册在启动时冻结——新增伤害类型后需$(o)重启$()才会生成对应附魔；热重载仅更新配置数值。"
+    }
+  ]
+}

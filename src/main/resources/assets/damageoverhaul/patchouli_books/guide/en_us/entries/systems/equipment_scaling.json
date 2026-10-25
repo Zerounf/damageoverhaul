@@ -1,0 +1,35 @@
+{
+  "name": "Equipment Scaling",
+  "icon": "minecraft:netherite_sword",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Equipment Scaling is a soft-dependency integration with the $(#9370DB)more_attributes$() mod: weapons and armor grow stronger with the attribute points players invest. $(br2)The 9 base attributes:$(br)strength / health / focus$(br)stamina / endurance / intelligence$(br)agility / skill / luck$(br2)Without more_attributes installed this system stays inactive and everything else works normally."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)How scaling is calculated$()$(br2)$(bold)correction = Σ(multiplier × effective points)$()$(br)$(bold)effective points = invested level − baseLevel$()$(br2)strength baseLevel is 10, all others are 0; negative values are allowed, matching more_attributes' own scaling semantics. $(br2)Example: multiplier 0.02 = +2% per effective point. 30 invested strength (20 effective) → 0.02×20 = $(6)+40%$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Two config files$()$(br2)$(l:damageoverhaul:config/config_overview)weapon_scaling.json$() - weapon scaling table$(br)$(l:damageoverhaul:config/config_overview)armor_scaling.json$() - armor scaling table$(br2)On first world load the registry is fully scanned: swords/axes/bows/crossbows/tridents, any item with attack damage, guns already known to weapon_distributions, and every armor piece. Each item gets one $(o)all-zero$() row (cataloguing only - no effect, no tooltip). $(br2)Each row holds multipliers keyed by $(bold)damage type × base attribute$(); the file header holds the enable flag, base_attributes and grade_thresholds."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Weapon resolution$() (players only)$()$(br)Independent per damage type, added into the existing additive damage bracket:$(br2)type damage × (1 + charm bonus + potion bonus $(bold)+ weapon scaling$())$(br2)The weapon is the held item (main hand if it has a scaling row, otherwise off hand). Mob attacks have no attribute points and gain no scaling."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Armor resolution$() (players only)$()$(br)The 4 pieces (head/chest/legs/feet) are $(bold)multiplied piece-by-piece$(), independently per damage type, after enchantment+potion resistance and before charm resistance:$(br2)damage × (1−head) × (1−chest) × (1−legs) × (1−feet)$(br2)Multiplicative, not additive: four pieces each with 10% fire scaling → 0.9⁴ ≈ 0.656, i.e. fire damage taken $(6)≈ -34%$() (not -40%)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Letter grades$()$(br)The \"Attribute Scaling\" tooltip section is computed live from the viewing player's points. Each line shows type + letter + percent, sorted descending:$(br2)Weapon: Fire $(6)S (+150%)$() (red)$(br)Armor:  Fire $(3)S (-150%)$() (green = less damage taken)$(br2)Default thresholds: S≥150% A≥100% B≥75% C≥50% D≥25% E≥0%, customizable via grade_thresholds. Corrections ≤ 0 are hidden (negative corrections still apply in combat). $(br2)Toggle: show_equipment_scaling in display_config.json."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)Automatic maintenance$()$(br2)· New damage type → rows added for every item$(br)· New more_attributes attribute → columns added$(br)· Mods adding new weapons/armor → auto-catalogued at startup$(br)· Old configs auto-migrate, originals backed up to backups/$(br)· All-zero rows are never synced to clients$(br2)Workflow: edit JSON → /damageoverhaul reload → done (on a dedicated server, reconnect to refresh tooltips)."
+    }
+  ]
+}

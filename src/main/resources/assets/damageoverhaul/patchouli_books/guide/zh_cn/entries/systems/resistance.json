@@ -1,0 +1,15 @@
+{
+  "name": "实体与护甲抗性",
+  "icon": "minecraft:netherite_chestplate",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)entity_resistances.json$() 按实体 ID 配置每种伤害类型的抗性系数。$(br2)示例：$(br)$(#DAA520)穿刺$(): -0.5（受穿刺伤害 -50%…即额外减免）$(br)$(#FF4500)火焰$(): 0.3（受火焰伤害 +30%…即易伤）$(br2)正值为易伤（受伤加深），负值为抗性（受伤减免），0 为无修正。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)armor_resistances.json$() 按护甲物品 ID 配置抗性，$(o)护甲上的 protect 附魔会在护甲抗性之后、防御值之前再叠加 5%/级$()。$(br2)$(2)两段独立减免$()$(br)最终伤害 = 基础抗性减免 → 护甲附魔抗性 → 原版护甲值与韧性减免，逐段乘算。$(br2)护甲 tooltip 按数值降序显示全部非零抗性，红色为易伤、绿色为抗性。"
+    }
+  ]
+}

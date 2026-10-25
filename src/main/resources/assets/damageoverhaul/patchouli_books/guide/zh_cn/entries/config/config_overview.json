@@ -1,0 +1,15 @@
+{
+  "name": "配置文件总览",
+  "icon": "minecraft:writable_book",
+  "category": "damageoverhaul:config",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "全部配置位于 $(4)config/damageoverhaul/$()：$(br)$(bold)damage_types.json$() — 伤害类型定义（核心，其他文件自动同步）$(br)$(bold)damage_type_mappings.json$() — 伤害来源→类型映射（支持混合分布）$(br)$(bold)weapon_distributions.json$() — 武器分布 + 枪械自动学习$(br)$(bold)unarmed_distributions.json$() — 空手/生物裸击分布$(br)$(bold)entity_resistances.json$() — 实体抗性"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)armor_resistances.json$() — 护甲抗性$(br)$(bold)ranged_config.json$() — 远程来源与射弹分布$(br)$(bold)projectile_item_mappings.json$() — 射弹映射与实体替换$(br)$(bold)block_distributions.json$() — 方块源性伤害$(br)$(bold)special_mechanics.json$() — 伤害偏转等特殊机制$(br)$(bold)mana_repair_config.json$() — 魔力修复$(br)$(bold)display_config.json$() — tooltip 显示开关（6 项）$(br)$(bold)projectile_strike_config.json$() — 射弹附魔加成$(br)$(bold)charms.json$() — 自家 8 种伤害宝石$(br)$(bold)external_charms.json$() — 第三方饰品因子表（自动扫描）$(br)$(bold)mob_effects_config.json$() — 药水效果数值表（每类型4效果）$(br)$(bold)weapon_scaling.json$() — 武器补正倍率表（需 more_attributes）$(br)$(bold)armor_scaling.json$() — 盔甲补正倍率表（需 more_attributes）$(br2)$(o)所有文件缺少字段/条目时会自动补齐并回写。$()"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "指令",
+  "icon": "minecraft:command_block",
+  "priority": 3,
+  "description": "/damageoverhaul 指令的完整用法。"
+}

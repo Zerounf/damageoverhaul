@@ -1,0 +1,19 @@
+{
+  "name": "常见问题",
+  "icon": "minecraft:spyglass",
+  "category": "damageoverhaul:faq",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Q: 客户端看不到服务器的分布配置？$()$(br)A: 无需手动同步——玩家登录时服务端会自动推送全部配置；若刚改完服务端配置，重连即可。$(br2)$(6)Q: 新增伤害类型后附魔没出现？$()$(br)A: 附魔在启动时注册冻结，需$(o)重启游戏$()生成新附魔；配置数值可热重载。$(br2)$(6)Q: 修改配置后不生效？$()$(br)A: 执行 $(6)/damageoverhaul reload$()；若 JSON 格式错误，查看日志。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Q: 枪械模组的枪想自定义分布？$()$(br)A: 先拿那把枪射一次（自动学习会登记条目），再改 weapon_distributions.json 中对应条目并 reload。$(br2)$(6)Q: 把箭改成射 TNT 伤害怎么算？$()$(br)A: 见$(l:damageoverhaul:systems/replace_entity)射弹实体替换$()；TNT 爆炸默认走钝击，可在映射表或方块/射弹配置中细化。$(br2)$(6)Q: 想隐藏某些 tooltip？$()$(br)A: display_config.json 五个开关，服务端为准。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Q: 怎么给其他模组的饰品加增伤/抗性？$()$(br)A: 无需手写配置。启动世界后所有 Curios 饰品已自动收录进 external_charms.json，把目标饰品行对应类型的 0 改成数值（如 0.15）再 reload。详见$(l:damageoverhaul:systems/charms)饰品系统$()。$(br2)$(6)Q: 第三方饰品改了数值却没效果？$()$(br)A: 检查：饰品是否真的装备在 Curios 槽位（放背包无效）、因子是否非 0、是否 reload（服务器需重连）、enable_external_charms 是否为 true。$(br2)$(6)Q: 怎么临时加减伤害/抗性？$()$(br)A: 用 $(6)/effect$() 给予药水效果。每种伤害类型有 4 个效果（resist_/vulnerable_/amplify_/weaken_）。详见$(l:damageoverhaul:systems/mob_effects)药水效果系统$()。$(br2)$(6)Q: 附魔等级能超过 4 级吗？$()$(br)A: 可以。max_enchant_level 默认 255，铁砧叠加/指令的任意等级均按线性公式生效。修改上限需重启。"
+    }
+  ]
+}

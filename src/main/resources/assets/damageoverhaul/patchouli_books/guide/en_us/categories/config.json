@@ -1,0 +1,6 @@
+{
+  "name": "Configuration",
+  "icon": "minecraft:writable_book",
+  "priority": 2,
+  "description": "All config files in config/damageoverhaul/ and how to edit them."
+}

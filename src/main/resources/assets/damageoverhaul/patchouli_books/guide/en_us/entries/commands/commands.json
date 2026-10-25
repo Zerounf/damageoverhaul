@@ -1,0 +1,15 @@
+{
+  "name": "Commands",
+  "icon": "minecraft:command_block",
+  "category": "damageoverhaul:commands",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "All commands require $(bold)OP level 2$().$(br2)$(6)/damageoverhaul reload$()$(br)Reloads all configs, auto-completing resistance/weapon/mapping tables for new damage types.$(br2)$(6)/damageoverhaul migrate$()$(br)Forces a migration check (same as reload)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)/damageoverhaul migrations$()$(br)Shows the detailed migration log from the last load.$(br2)$(6)/damageoverhaul status$()$(br)Shows current state: damage types, enchantment counts (and level cap), potion effect status, deflection, ranged source, projectile stats, dual-purpose list, mana repair, block distributions, self charm count and registered third-party charm entries."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "八种伤害类型",
+  "icon": "minecraft:diamond_sword",
+  "category": "damageoverhaul:intro",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "本模组将一切伤害归入 8 种类型：$(br)$(#C0C0C0)斩击$() — 剑刃类劈砍$(br)$(#8B4513)钝击$() — 锤击、爆炸、坠落$(br)$(#DAA520)穿刺$() — 箭矢、尖刺$()$(br)$(#9370DB)魔法$() — 药水、附魔伤害$(br)$(#FF4500)火焰$() — 烧灼、岩浆$(br)$(#87CEEB)闪电$() — 雷击$(br)$(#4B0082)黑暗$() — 凋零、暗蚀$(br)$(#FFD700)神圣$() — 光明与治疗转化"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)伤害类型如何判定？$()$(br)原版每一段伤害都携带一个$(o)伤害来源标识$()（如 minecraft:arrow、minecraft:explosion）。模组通过 $(l:damageoverhaul:config/config_overview)damage_type_mappings.json$() 将这些标识翻译为 8 种类型之一，$(o)也支持映射为多种类型的混合分布$()。$(br2)模组新增的未知伤害类型会被$(o)自动扫描$()登记进映射表（按标签推断，无标签默认钝击），无需手动维护。$(br2)全部类型与映射可在配置中自由修改。"
+    }
+  ]
+}

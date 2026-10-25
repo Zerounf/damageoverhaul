@@ -1,0 +1,15 @@
+{
+  "name": "Mechanics & Display",
+  "icon": "minecraft:target",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)special_mechanics.json$() offers damage $(bold)deflection$() and other mechanics, fully configurable. $(l:damageoverhaul:config/config_overview)unarmed_distributions.json$() sets bare-hand/mob melee defaults per entity."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)display_config.json$() toggles four tooltip sections: weapon distribution, armor resistance, projectile distribution, mana repair.$(br2)$(2)Server-authoritative$()$(br)In multiplayer the $(o)server's$() display config wins and syncs to clients on login."
+    }
+  ]
+}

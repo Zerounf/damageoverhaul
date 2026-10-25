@@ -1,0 +1,15 @@
+{
+  "name": "武器伤害分布",
+  "icon": "minecraft:netherite_sword",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l:damageoverhaul:config/config_overview)weapon_distributions.json$() 控制每件武器的伤害构成。$(br2)以铁剑为例：$(br)$(#C0C0C0)斩击$(): 0.6, $(#DAA520)穿刺$(): 0.3, $(#8B4513)钝击$(): 0.1$(br2)含义：铁剑造成 6 点攻击时，实际拆分为 3.6 斩击 + 1.8 穿刺 + 0.6 钝击，各类型分别受对应护甲抗性减免。$(br2)占比总和可大于 1.0 —— 表示总伤害放大；分布数值支持$(o)任意类型组合$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)优先级$()$(br)1. 物品 NBT 中的自定义分布（最高）$(br)2. 配置文件按物品 ID 匹配$(br)3. 默认表（剑/斧/镐/铲/锄按类型预设）$(br2)$(2) tooltip$()$(br)武器 tooltip 实时显示分布数值与占比；物品无攻击力属性时（如枪械），自动解析其他模组 tooltip 中标注的伤害数字作为基数，解析失败则仅显示百分比。"
+    }
+  ]
+}

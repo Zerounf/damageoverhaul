@@ -1,0 +1,19 @@
+{
+  "name": "FAQ",
+  "icon": "minecraft:spyglass",
+  "category": "damageoverhaul:faq",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Q: Clients can't see server distributions?$()$(br)A: Configs auto-sync on login - reconnect after changing server configs.$(br2)$(6)Q: New damage type has no enchantments?$()$(br)A: Enchantments freeze at launch; $(o)restart$() to generate them. Values hot-reload fine.$(br2)$(6)Q: Config edits not applying?$()$(br)A: Run $(6)/damageoverhaul reload$(); check logs for JSON errors."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Q: Custom distribution for a gun?$()$(br)A: Shoot once (auto-learning registers the entry), edit weapon_distributions.json, reload.$(br2)$(6)Q: Arrows now shoot TNT - how is damage computed?$()$(br)A: See $(l:damageoverhaul:systems/replace_entity)Projectile Replacement$(); TNT explosions default to Blunt.$(br2)$(6)Q: Hide some tooltips?$()$(br)A: Five switches in display_config.json, server-authoritative."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(6)Q: How do I add bonuses to another mod's trinket?$()$(br)A: No manual setup needed. After launching a world, all Curios items are already registered in external_charms.json - change the target type's 0 to a value (e.g. 0.15) and reload. See $(l:damageoverhaul:systems/charms)Charm System$().$(br2)$(6)Q: Third-party charm factors have no effect?$()$(br)A: Check: the item is actually worn in a Curios slot (backpack doesn't count), the factor is non-zero, you reloaded (reconnect on servers), and enable_external_charms is true.$(br2)$(6)Q: How do I temporarily modify damage/resistance?$()$(br)A: Use $(6)/effect$() to grant potion effects. Each damage type has 4 effects (resist_/vulnerable_/amplify_/weaken_). See $(l:damageoverhaul:systems/mob_effects)Potion Effects$().$(br2)$(6)Q: Can enchantments exceed level 4?$()$(br)A: Yes. max_enchant_level defaults to 255; anvil-combined or command-granted levels work via the linear formula. Changing the cap needs a restart."
+    }
+  ]
+}

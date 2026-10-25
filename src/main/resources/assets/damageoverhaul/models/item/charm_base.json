@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "damageoverhaul:item/charm_base_0"
+  },
+  "overrides": [
+    { "predicate": { "damageoverhaul:frame": 0.0 }, "model": "damageoverhaul:item/charm_frame_0" },
+    { "predicate": { "damageoverhaul:frame": 1.0 }, "model": "damageoverhaul:item/charm_frame_1" },
+    { "predicate": { "damageoverhaul:frame": 2.0 }, "model": "damageoverhaul:item/charm_frame_2" },
+    { "predicate": { "damageoverhaul:frame": 3.0 }, "model": "damageoverhaul:item/charm_frame_3" }
+  ]
+}

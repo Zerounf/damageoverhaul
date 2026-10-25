@@ -1,0 +1,15 @@
+{
+  "name": "射弹实体替换",
+  "icon": "minecraft:tnt",
+  "category": "damageoverhaul:systems",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在 $(l:damageoverhaul:config/config_overview)projectile_item_mappings.json$() 中，除显示映射外还可以让武器$(o)实际发射完全不同的实体$()——例如把箭改成射出 TNT。$(br2)配置结构：$(n){ \"entity\": \"minecraft:tnt\", \"replace_entity\": true }$()$(br2)全局开关 $(bold)allow_dangerous_replace$()（默认 false）必须同时开启，替换才会执行——防止误配置导致崩溃。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)替换细节$()$(br)替换发生在射弹实体生成瞬间：取消原实体 → 创建新实体并转移位置/速度/旋转/所有者。$(br2)$(2)伤害结算$()$(br)被替换的实体带有内部标记，伤害按原弹药物品映射的实体分布结算；未配置时按其伤害类型映射兜底（如 TNT 爆炸 → 钝击）。$(br2)$(4)风险提示$()：映射到大型实体（如末影龙）或复杂实体可能产生异常行为，请自行承担。"
+    }
+  ]
+}

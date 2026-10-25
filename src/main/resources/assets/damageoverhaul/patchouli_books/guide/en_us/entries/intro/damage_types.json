@@ -1,0 +1,15 @@
+{
+  "name": "The 8 Damage Types",
+  "icon": "minecraft:diamond_sword",
+  "category": "damageoverhaul:intro",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "All damage is classified into 8 types:$(br)$(#C0C0C0)Slashing$() - blades$(br)$(#8B4513)Blunt$() - hammers, explosions, falls$(br)$(#DAA520)Piercing$() - arrows, spikes$(br)$(#9370DB)Magic$() - potions, magic damage$(br)$(#FF4500)Fire$()$(br)$(#87CEEB)Lightning$()$(br)$(#4B0082)Dark$() - wither$(br)$(#FFD700)Holy$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(2)How is damage classified?$()$(br)Every vanilla damage source carries an ID (e.g. minecraft:arrow). $(l:damageoverhaul:config/config_overview)damage_type_mappings.json$() translates them into types - including $(o)mixed distributions$().$(br2)Unknown modded damage types are auto-scanned into the mapping table via tag inference, so modded content works out of the box."
+    }
+  ]
+}
